@@ -244,17 +244,41 @@ article.verhaal header {
 article.verhaal h1 {
     border-bottom: 3px solid red;
     display: inline;
-    padding: 5px 0;
+    padding: 20px 0 10px;
 }
 article.verhaal h3 {
-    padding:5px 10px;
+    padding:10px 10px 5px;
     font-weight: normal;
     font-size: 0.9em;
+    color: #00477F;
+    text-align: right;
+    position: relative;
+}
+article.verhaal h3  span.genre {
+    font-weight:bold;
+    position: absolute;
+    left: 10px;
+}
+article.verhaal h3  span.rating {
+    padding: 0 0 0 20px;
+    background: url(../assets/star.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    margin-right: 20px;
+}
+
+article.verhaal h3  span.leestijd {
+    padding: 0 0 0 20px;
+    background: url(../assets/clock.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
 }
 
 article.verhaal p {
-    padding: 5px 0 20px;
+    padding: 25px 20px 25px;
+    font-size: 15px;
 }
+
 
 /* article.verhaal span.rating::before {
     content: url(../star.png);
