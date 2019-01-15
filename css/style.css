@@ -9,8 +9,13 @@
 body {
     background: #F5F5F6;
 }
+a {
+    color:#13679c;
+    text-decoration: none;
+    margin: 3em;
+}
 
-a, button {
+a.standard, button.standard {
     background: #00477F;
     font-size: 16px;
     background-image: url(../assets/cta-arrow.png);
@@ -40,24 +45,50 @@ form {
 }
 
 
-
-
-
-
 header.page-header {
+    box-shadow: 0 1px 20px 0 rgba(35,31,32,.1);
+    background: #231f20;
     position: fixed;
     display: block;
-    background: white;
-    height: 55px;
     width: 100%;
-    padding: 3% 2%;
+    height: 55px;
     z-index: 11;
     top: 0;
+    transition: ease background .5s;
 }
 
-header.page-header img {
-    height: 85%;
 
+
+header.page-header div{
+    position: relative;
+
+    height: 55px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+
+}
+
+
+
+header.page-header div img {
+    height: 30px;
+    position: relative;
+}
+
+header.page-header div .logo{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 20px;
+}
+
+header.colorswitch {
+    background: white;
+}
+.homeBtn {
+    margin: 0;
 }
 
 nav.main-nav {
@@ -69,11 +100,35 @@ nav.main-nav {
 
 nav.main-nav ul li{
     display: inline-block;
-    background: red;
-    width: 45px;
-    height: 45px;
+
     margin: 5px;
 }
+
+a.mijn-lijst {
+    padding:.7em 1.2em;
+    top: -4px;
+    font-size: 1.1em;
+    color: white;
+    top: 0;
+    margin: 0;
+    transition: ease color .5s;
+}
+
+a.mijn-lijst span {
+    display: none;
+}
+
+.lijst-icon {
+    margin-right: .5em;
+    position: relative;
+    height: 20px;
+    top: .5em;
+}
+
+a.text-switch {
+    color: #13679c;
+}
+
 
 main {
     margin-top: 52px;
@@ -81,9 +136,9 @@ main {
 
 section.aanbevolen {
     position: relative;
-    height: 40vh;
+    height: 37vh;
     background: url(../assets/main-header.jpg);
-    background-size: cover;
+    background-size:cover;
     background-position: center;
     padding: 20px 50px;
     width: 100%;
@@ -96,13 +151,16 @@ section.aanbevolen h1 {
     color: white;
     font-size: 1.3em;
     margin-bottom: 25px;
+    font-weight: normal;
 }
 
 section.aanbevolen article {
     position: absolute;
-    width: 70%;
+    width: 100%;
+    left: 0%;
     bottom: 65px;
 }
+
 
 section.filter {
     width: 90vw;
@@ -137,6 +195,7 @@ section.filter legend.first-legend {
 section.filter fieldset.genre legend {
     border-top: solid 3px #009DDA;
     padding: 10px 0;
+
 }
 
 section.filter fieldset.genre div {
@@ -148,7 +207,7 @@ section.filter fieldset.genre div input {
 }
 
 section.filter fieldset.genre div label {
-
+    width: 98%;
     margin: 5px;
     padding: 10px 5px 5px;
     display: block;
@@ -156,12 +215,35 @@ section.filter fieldset.genre div label {
     display: flex;
     flex-direction: row;
     color: #12679C;
+    position: relative;
+}
+
+.see-more {
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #12679c;
+    margin: 2em 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+fieldset.genre .genre-filters {
+    max-height: 270px;
+    overflow: hidden;
+    transition: ease max-height .5s;
+}
+
+ fieldset.genre .genre-filters.show-more {
+    max-height: 495px;
 }
 
 section.filter fieldset.genre div label::before {
     content: "";
-    width: 1.88em;
-    height: 1.88em;
+    width: 1.87em;
+    height: 1.87em;
     background-color: #EBEBEC;
     margin: 0 0.88rem 0 0;
     display: inline-block;
@@ -170,14 +252,32 @@ section.filter fieldset.genre div label::before {
     top: -5px;
 }
 
+section.filter fieldset.genre div label span{
+    position: absolute;
+    right: 25%;
+    top: 5px;
+}
+
+section.filter fieldset.genre div label span::before{
+    content: "("
+}
+
+section.filter fieldset.genre div label span::after{
+    content: ")"
+}
+
 section.filter fieldset.genre div [type=checkbox]:checked + label::before{
-    background-color: green;
+    background-image: url('../assets/check.png');
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 section.filter fieldset.footer {
     background: #F5F5F6;
     border-radius: 3px;
     padding: 10px 20px 10px;
+    margin-top: -3em;
 }
 
 section.filter fieldset.footer legend {
@@ -193,20 +293,116 @@ section.filter fieldset.footer div label {
     color: #12679C;
     display: inline-block;
     padding: 10px 0;
-    width: 20%;
+    width: 25%;
     text-align: center;
     margin: 0 -2px;
     position: relative;
     border-bottom: 3px solid lightgrey;
+    transition: ease border-bottom .5s;
     margin-bottom: 20px;
 }
 section.filter fieldset.footer div [type=checkbox]:checked + label{
     border-bottom: 3px solid #12679C;
 }
 
-section.sortby  nav{
+
+
+/* Sort by */
+
+section.sortby {
     background-color: #EBEBEC;
+    padding: 1.5em 1.5em 2.5em;
 }
+section.sorteer-padding {
+    padding: 1.5em 1.5em 6.5em;
+}
+
+section.sortby header {
+    text-align: center;
+}
+
+section.sortby h2 {
+    display: inline-block;
+    padding-bottom: .5em;
+    color: #13679c;
+    border-bottom: 2px solid red;
+    margin-bottom: 1.4em;
+    font-weight: normal;
+}
+
+section.sortby  nav{
+    width: 100%;
+    position: relative;
+}
+
+section.sortby  nav ul {
+    list-style-type: none;
+}
+
+section.sortby ul li {
+    display: inline-block;
+    width: auto;
+    padding: 5px;
+}
+
+.sort {
+    margin: 0;
+    display: block;
+    background: white;
+    padding: .7em 1.2em .7em 1.2em;
+    border-radius: 3px;
+}
+.sort-close { opacity: 0; transition: ease opacity .5s;}
+.sort-close::after {
+    content: "";
+    background: url(../assets/close.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: .75em;
+    height: .75em;
+    display: inline-block;
+    margin-left: .9em;
+    border-radius: 3px;
+    position: relative;
+    top: 2px;
+
+}
+
+.sort-order {
+    position: absolute;
+    right: 54%;
+    bottom: .2em;
+}
+.sortbottom {
+    bottom: -4.5em;
+}
+
+.sort-order::after {
+    content: "";
+    background: url(../assets/sort.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: .75em;
+    height: .75em;
+    display: inline-block;
+    margin-left: .9em;
+    border-radius: 3px;
+    position: relative;
+    top: 2px;
+
+}
+
+.sort-show {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* verhalen */
 
 section.verhalen {
     width: 100%;
@@ -220,9 +416,11 @@ article.verhaal {
     width: 90%;
     background: grey;
     border-radius: 3px;
-    margin-top: 20px;
+    margin-top: 1.2em;
     margin-bottom: 20px;
     background: white;
+    max-height: auto;
+    overflow: hidden;
 
     -webkit-box-shadow: 0px 5px 8px -2px rgba(0,0,0,0.25);
     -moz-box-shadow: 0px 5px 8px -2px rgba(0,0,0,0.25);
@@ -230,11 +428,39 @@ article.verhaal {
 }
 
 article.verhaal img{
-    width: 100%;
+    height: 250px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.acrostichon {
+    position: relative;
+    left: 10px;
+}
+
+article.verhaal div{
+    padding-top: 5px;
+    position: relative;
+    background: white;
+    top: -5px;
+    transition: ease top .2s;
+    box-shadow: 0px -2px 5px -1px rgba(0,0,0,0.5);
+}
+
+div.tile-content{
+    top: -70px;
+    position: relative;
+}
+
+article.verhaal:hover div.tile-content{
+    position: relative;
+    top: -70px;
+
 }
 
 article.verhaal h1, article.verhaal p  {
     text-align: center;
+    color: #00477f;
 }
 
 article.verhaal header {
@@ -279,7 +505,265 @@ article.verhaal p {
     font-size: 15px;
 }
 
+article.verhaal footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 4em;
+    padding-top: 10px;
+}
+
+article.verhaal footer a {
+    margin: 0;
+}
+
+article.verhaal footer a .ani-box {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    top: -3px;
+    transform: rotate(0);
+    height: 10px;
+    width: 10px;
+    transition: ease transform .8s;
+    overflow: visible;
+    box-shadow: none;
+}
+
+
+
+.ani-box .bar1 {
+    transform: rotate(90deg);
+    top: 0;
+    left: 5px;
+    height: 10px;
+    background: #00477F;
+    width:1px;
+    position: absolute;
+}
+.ani-box .bar2 {
+    top: 0;
+    left: 5px;
+    height: 10px;
+    background: #00477F;
+    width:1px;
+    position: absolute;
+}
+
+/* .ani-box .bar-finkje1 {
+    transform: rotate(45deg) ;
+    height: 13px ;
+    left: 10px ;
+    background: #00477F;
+    width:1px;
+    position: absolute;
+}
+
+.ani-box .bar-finkje2 {
+    transform: rotate(-45deg) ;
+    height: 4px ;
+    left: 3px ;
+    top: 7px ;
+    background: #00477F;
+    width:1px;
+    position: absolute;
+} */
+
+
+.opslaan span, .opslaan1 span {
+    position: relative;
+    top: -3px;
+    display: inline-block;
+}
+.opslaan, .opslaan1, .leesmeer {
+    height: 30px;
+    border-bottom: 1px solid #00477F;
+    padding: 0 3px;
+}
+
+.opslaan:hover .ani-box, .opslaan1:hover .ani-box{
+    transform: rotate(360deg);
+}
+
 
 /* article.verhaal span.rating::before {
     content: url(../star.png);
 } */
+
+footer.page-footer {
+    width: 100%;
+    background: white;
+    height: 50px;
+}
+
+footer.page-footer img{
+    width: 1200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+fieldset.genre input:checked {
+    display: none;
+}
+
+
+
+.mobile-center {
+    position: absolute;
+    right: -4em;
+    margin: 1em 0;
+}
+
+
+@media only screen and (min-width: 650px) {
+    .see-more {
+        display: none;
+    }
+
+    .sort-order {
+        position: absolute;
+        right: 10px;
+        bottom: .5em;
+    }
+
+    section.sortby h2 {
+        margin-bottom: 2em;
+    }
+
+    section.sortby {
+        padding: 1.5em 1.5em 2.5em;
+    }
+
+    a.mijn-lijst span {
+        display: inline-block;
+    }
+
+    article.verhaal footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        height: 2em;
+        padding-top: 10px;
+    }
+    article.verhaal footer a {
+        margin: 2.8em;
+    }
+
+    .mobile-center {
+        position: absolute;
+        right: 5em;
+        transform: translateX(0);
+        margin: 10px;
+    }
+    article.verhaal {
+        width: 47%;
+        margin: 1.5%;
+
+    }
+
+
+    section.aanbevolen article {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 65px;
+        font-size: 2em;
+        padding: 2vh;
+    }
+
+    section.filter fieldset.genre div label {
+        width: 48%;
+    }
+
+    section.filter fieldset.footer div label {
+
+        color: #12679C;
+        display: inline-block;
+        padding: 10px 0;
+        width: 20%;
+        text-align: center;
+        margin: 0 -2px;
+        position: relative;
+        border-bottom: 3px solid lightgrey;
+        transition: ease border-bottom .5s;
+        margin-bottom: 20px;
+    }
+
+    section.filter fieldset.footer div button{
+
+        right: 0;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    section.aanbevolen {
+        height: 60vh;
+        max-height: 600px;
+    }
+    article.verhaal {
+        width: 30%;
+        margin: 1.5%;
+
+    }
+
+
+    /* article.verhaal div footer {
+        height: 0;
+    } */
+    section.filter fieldset.footer div label {
+        max-width: 100px;
+
+    }
+
+    section.filter fieldset.footer div {
+        width: 50%;
+
+    }
+
+    section.filter fieldset.footer div button{
+        position: absolute;
+        right: 5em;
+    }
+
+    section.filter {
+        max-width: 1200px;
+    }
+
+    section.sortby {
+        width: 100%;
+    }
+
+    section.sortby nav{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+
+}
+
+@media only screen and (min-width: 1200px) {
+    section.verhalen {
+        width: 1244px;
+        margin: 0 auto;
+    }
+    article.verhaal {
+        width: 30%;
+        margin: 1.5%;
+    }
+    section.filter fieldset.genre div label {
+        width: 24%;
+    }
+    section.aanbevolen {
+        position: relative;
+        height: 37vh;
+        background: url(../assets/main-header.jpg);
+        background-attachment: fixed;
+        background-size:auto 40%;
+        background-position: top;
+        padding: 20px 50px;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+}

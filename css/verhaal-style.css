@@ -1,0 +1,16 @@
+body {
+    background: white;
+}
+
+.titlebox {
+
+}
+
+.hidetitle {
+    display: none;
+}
+
+.verhaal {
+    width: 100%;
+    margin-bottom: 26em;
+}

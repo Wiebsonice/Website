@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RET | Verhalen</title>
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
     </head>
-    <body>
+    <body id="home">
         <header class="page-header">
-            <img src="assets/logo.svg" alt="" class="logo">
+            <div>
+            <img src="assets/logo.svg" alt="RET logo" class="logo">
 
             <nav class="main-nav">
                 <ul>
-                    <li>Z</li>
-                    <li>S</li>
+                    <li><a href="" class="mijn-lijst"><img src="assets/opgeslagen-w.png" alt="" class="lijst-icon"><span> Mijn Lijst</span></a></li>
                 </ul>
             </nav>
+            </div>
         </header>
 
         <main>
             <section class="aanbevolen">
                 <article class="aanbevolen-verhaal">
-                    <h1>Laat je verrassen door het verhaal van de dag.</h1>
-                    <a href="#">Lees het verhaal</a>
+                    <h1>Het verhaal van de dag.</h1>
+                    <a href="#" class="standard">Lees het verhaal</a>
                 </article>
             </section>
 
@@ -37,25 +39,42 @@
 
                         <fieldset class="genre">
                             <legend>Kies een genre</legend>
-                            <div>
-                                <input type="checkbox" id="fictie" value="21">
-                                <label for="fictie">Fictie <span>21</span></label>
+                            <div class="genre-filters">
+                                <input type="checkbox" id="fictie" value="8">
+                                <label for="fictie">Fictie <span>8</span></label>
 
-                                <input type="checkbox" id="spanning" value="4">
-                                <label for="spanning">Spanning <span>4</span></label>
+                                <input type="checkbox" id="grof" value="2">
+                                <label for="grof">Grof <span>2</span></label>
 
-                                <input type="checkbox" id="fictie2" value="21">
-                                <label for="fictie2">Fictie <span>21</span></label>
+                                <input type="checkbox" id="humor" value="6">
+                                <label for="humor">Humor <span>6</span></label>
 
-                                <input type="checkbox" id="spanning2" value="4">
-                                <label for="spanning2">Spanning <span>4</span></label>
+                                <input type="checkbox" id="spanning" value="10">
+                                <label for="spanning">Spanning <span>10</span></label>
 
-                                <input type="checkbox" id="fictie2" value="21">
-                                <label for="fictie2">Fictie <span>21</span></label>
+                                <input type="checkbox" id="verhalend" value="14">
+                                <label for="verhalend">Verhalend <span>14</span></label>
 
-                                <input type="checkbox" id="spanning3" value="4">
-                                <label for="spanning3">Spanning <span>4</span></label>
+                                <input type="checkbox" id="romantiek" value="9">
+                                <label for="romantiek">Romantiek <span>9</span></label>
+
+                                <input type="checkbox" id="informatief" value="5">
+                                <label for="informatief">Informatief <span>5</span></label>
+
+                                <input type="checkbox" id="zwevend" value="8">
+                                <label for="zwevend">Zwevend <span>8</span></label>
+
+                                <input type="checkbox" id="gedicht" value="6">
+                                <label for="gedicht">Gedicht <span>6</span></label>
+
+                                <input type="checkbox" id="cryptisch" value="2">
+                                <label for="cryptisch">Cryptisch <span>2</span></label>
+
+                                <input type="checkbox" id="Kinderlijk" value="3">
+                                <label for="Kinderlijk">Kinderlijk <span>3</span></label>
+
                             </div>
+                            <a class="see-more">Laat nog (5) verhalen zien  +</a>
                         </fieldset>
 
                         <fieldset class="footer">
@@ -72,84 +91,202 @@
 
                                 <input type="checkbox" id="vierde">
                                 <label for="vierde">10+  </label>
+
+                                <button class="standard mobile-center" type="submit">Toon 99 verhalen</button>
                             </div>
-                            <button type="submit">Toon 18 resultaten</button>
+
                         </fieldset>
 
-
+                    </form>
 
                 </article>
             </section>
             <section class="sortby">
                 <nav>
                     <header>
-                        <h2>Gevonden verhalen</h2>
+                        <h2 class="sort-title">Alle verhalen (99)</h2>
                     </header>
                     <ul>
-                        <li>genre</li>
-                        <li>genre</li>
+                        <li><a class="sort sort-close">Fictie</a></li>
+                        <li><a class="sort sort-close">Gedicht</a></li>
+                        <li><a class="sort sort-order">Sorteren op</a></li>
                     </ul>
-                    <select class="" name="">
-                        <optgroup label="Beoordeling">
-                        <option value="">Hoog - Laag</option>
-                        <option value="">Laag - Hoog</option>
-                        <optgroup label="Populair">
-                        <option value="">Hoog - Laag</option>
-                        <option value="">Laag - Hoog</option>
-                        <optgroup label="Datum">
-                        <option value="">Nieuw - Oud</option>
-                        <option value="">Oud - Nieuw</option>
-                    </select>
+
                 </nav>
             </section>
             <section class="verhalen">
                 <article class="verhaal">
-                    <img src="assets/verhaal-header.png" alt="">
+                    <img src="assets/verhalen/verhaal-header.png" alt="Header afbeelding van verhaal Alzhimer">
+                    <div class="tile-content">
                     <h3 class="verhaal-header">
                         <span class="genre">Verhalend</span>
 
-                        <span class="rating"> 4.5</span>
-                        <span class="leestijd"> 3 - 6min</span>
+                        <span class="rating"> 4.6</span>
+                        <span class="leestijd"> 6 - 9min</span>
                     </h3>
                     <header>
-                        <h1>Verhaal</h1>
+                        <h1>Alzhimer</h1>
                     </header>
                     <p>
-                        Ik stap uit, euh... Hoe heet het? Zo'n voervoersding op wielen. Van de gemeente
+                        Ik stap uit, euh... Hoe heet het? Zo'n voervoersding op wielen. Van de gemeente...
                     </p>
+                    <footer>
+                        <a href="" class="leesmeer">Lees verder</a>
+                        <a class="opslaan1">
+                            <div class="ani-box">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                            </div>
+                            <span>Voeg toe</span></a>
+                    </footer>
+                    </div>
                 </article>
-                <article class="verhaal">
-                    <img src="assets/verhaal-header.png" alt="">
-                    <h3 class="verhaal-header">
-                        <span class="genre">Verhalend</span>
 
-                        <span class="rating"> 4.5</span>
+                <article class="verhaal ">
+                    <img src="assets/verhalen/acrostichon.gif" alt="Header afbeelding van verhaal Alzhimer" class="acrostichon">
+                    <div class="tile-content">
+                    <h3 class="verhaal-header">
+                        <span class="genre">Gedicht</span>
+
+                        <span class="rating"> 3.9</span>
                         <span class="leestijd"> 3 - 6min</span>
                     </h3>
                     <header>
-                        <h1>Verhaal</h1>
+                        <h1>Acrostichon (1)</h1>
                     </header>
                     <p>
-                        Ik stap uit, euh... Hoe heet het? Zo'n voervoersding op wielen. Van de gemeente
+                        Stationsplein. Ik stap uit de bus, mijn zoontje slaapt
+Twaalf uur, het weer druilt, een meeuw lacht, een hond gaapt...
                     </p>
+                    <footer>
+                        <a href="sites/acrostichon.html" class="leesmeer">Lees verder</a>
+                        <a href="" class="opslaan">
+                            <div class="ani-box">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                            </div>
+                            <span>Voeg toe</span></a>
+                    </footer>
+                    </div>
                 </article>
-                <article class="verhaal">
-                    <img src="assets/verhaal-header.png" alt="">
-                    <h3 class="verhaal-header">
-                        <span class="genre">Verhalend</span>
 
-                        <span class="rating"> 4.5</span>
+                <article class="verhaal">
+                    <img src="assets/verhalen/haiku.png" alt="Header afbeelding van verhaal Alzhimer">
+                    <div class="tile-content">
+                    <h3 class="verhaal-header">
+                        <span class="genre">Gedicht</span>
+
+                        <span class="rating"> 3.6</span>
+                        <span class="leestijd"> 1 - 3min</span>
+                    </h3>
+                    <header>
+                        <h1>Haiku</h1>
+                    </header>
+                    <p>
+                        Op zoek naar een boek<br/>
+                        Een vrouw vraagt de weg en ik<br>
+                        Koop babyschoentjes
+                    </p>
+                    <footer>
+                        <a href="" class="leesmeer">Lees verder</a>
+                        <a href="" class="opslaan">
+                            <div class="ani-box">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                            </div>
+                            <span>Voeg toe</span></a>
+                    </footer>
+                    </div>
+                </article>
+
+
+                <article class="verhaal">
+                    <img src="assets/verhalen/stoned.png" alt="Header afbeelding van verhaal Alzhimer">
+                    <div class="tile-content">
+                    <h3 class="verhaal-header">
+                        <span class="genre">Zwevend</span>
+
+                        <span class="rating"> 4.0</span>
                         <span class="leestijd"> 3 - 6min</span>
                     </h3>
                     <header>
-                        <h1>Verhaal</h1>
+                        <h1>Stoned</h1>
+                    </header>
+                    <p>
+                        Zodra ik de bus uitstap steek ik een dikke vette joint op. De derde van de dag al. Ik neem een lange haal, inhaleer diep...
+                    </p>
+                    <footer>
+                        <a href="" class="leesmeer">Lees verder</a>
+                        <a href="" class="opslaan">
+                            <div class="ani-box">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                            </div>
+                            <span>Voeg toe</span></a>
+                    </footer>
+                    </div>
+                </article>
+
+
+                <article class="verhaal">
+                    <img src="assets/verhalen/poepen.png" alt="Header afbeelding van verhaal Alzhimer">
+                    <div class="tile-content">
+                    <h3 class="verhaal-header">
+                        <span class="genre">Grof</span>
+
+                        <span class="rating"> 3.2</span>
+                        <span class="leestijd"> 6 - 9min</span>
+                    </h3>
+                    <header>
+                        <h1>Poepen</h1>
                     </header>
                     <p>
                         Ik stap uit, euh... Hoe heet het? Zo'n voervoersding op wielen. Van de gemeente
                     </p>
+                    <footer>
+                        <a href="" class="leesmeer">Lees verder</a>
+                        <a href="" class="opslaan">
+                            <div class="ani-box">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                            </div>
+                            <span>Voeg toe</span></a>
+                    </footer>
+                    </div>
+                </article>
+
+                <article class="verhaal">
+                    <img src="assets/verhalen/rondo.png" alt="Header afbeelding van verhaal Alzhimer">
+                    <div class="tile-content">
+                    <h3 class="verhaal-header">
+                        <span class="genre">Informatief</span>
+
+                        <span class="rating"> 3.7</span>
+                        <span class="leestijd"> 3 - 6min</span>
+                    </h3>
+                    <header>
+                        <h1>Rondo's</h1>
+                    </header>
+                    <p>
+                        Ik stap uit, euh... Hoe heet het? Zo'n voervoersding op wielen. Van de gemeente
+                    </p>
+                    <footer>
+                        <a href="" class="leesmeer">Lees verder</a>
+                        <a href="" class="opslaan">
+                            <div class="ani-box">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                            </div>
+                            <span>Voeg toe</span></a>
+                    </footer>
+                    </div>
                 </article>
             </section>
         </main>
+
+        <footer class="page-footer">
+
+        </footer>
 
 
 
