@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/log-in.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RET | Inloggen</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+</head>
+
+<body>
+    <header class="page-header colorswitch">
+        <div>
+            <a class="homeBtn" href="../index.html"><img src="../assets/logo.svg" alt="RET logo" class="logo"></a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="" class="mijn-lijst text-switch"><img src="../assets/opgeslagen.png" alt="" class="lijst-icon"><span> Mijn Lijst</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+
+        <form class="login-box login-hide" action="index.html">
+            <fieldset class="login">
+                <legend><h1>Inloggen</h1></legend>
+
+                <label for="email">Email</label>
+                <input type="email" name="login" id="email" placeholder="naam@email.com" required>
+
+                <label for="wachtwoord">Wachtwoord</label>
+                <input type="password" name="login" id="wachtwoord" placeholder="*******" equired minlength="8" maxlength="24">
+
+                <button class="standard" type="submit" value="aanmelden">Log in</button>
+                <a class="vergeten">wachtwoord vergeten?</a>
+            </fieldset>
+
+            <fieldset class="recover">
+                <legend><h1>Wachtwoord vergeten</h1></legend>
+
+                <label for="email2">Email</label>
+                <input type="email" name="login" id="email2" placeholder="naam@email.com" required>
+
+                <button class="standard" type="submit" value="aanmelden">Vraag wachtwoord aan</button>
+                <a class="onthouden">Opnieuw inloggen</a>
+            </fieldset>
+
+        </form>
+
+
+    </main>
+
+
+
+
+
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

@@ -14,7 +14,7 @@
 
             <nav class="main-nav">
                 <ul>
-                    <li><a href="" class="mijn-lijst"><img src="assets/opgeslagen-w.png" alt="" class="lijst-icon"><span> Mijn Lijst</span></a></li>
+                    <li><a href="sites/log-in.html" class="mijn-lijst"><img src="assets/opgeslagen-w.png" alt="" class="lijst-icon"><span> Mijn Lijst</span></a></li>
                 </ul>
             </nav>
             </div>
@@ -109,8 +109,23 @@
                     <ul>
                         <li><a class="sort sort-close">Fictie</a></li>
                         <li><a class="sort sort-close">Gedicht</a></li>
-                        <li><a class="sort sort-order">Sorteren op</a></li>
                     </ul>
+                    <!-- <a class="sort sort-order">Sorteren op</a> -->
+
+                    <form class="sort-form sort-order">
+                      <fieldset>
+                        <legend class="hide">
+                          <h4>Sorteer op</h4>
+                        </legend>
+                        <select name="Sorteren op" id="" >
+                          <option>Sorteren op</option>
+                          <option value="populairhl">Populairiteit H-L</option>
+                          <option value="populairlh">Populairiteit L-H</option>
+                          <option value="beoordelinghl">Beoordeling H-L</option>
+                          <option value="beoordeinglh">Beoordeling L-H</option>
+                        </select>
+                      </fieldset>
+                    </form>
 
                 </nav>
             </section>
@@ -143,7 +158,7 @@
                 </article>
 
                 <article class="verhaal ">
-                    <img src="assets/verhalen/acrostichon.gif" alt="Header afbeelding van verhaal Alzhimer" class="acrostichon">
+                    <img src="assets/verhalen/acrostichon2.gif" alt="Header afbeelding van verhaal Alzhimer" class="acrostichon">
                     <div class="tile-content">
                     <h3 class="verhaal-header">
                         <span class="genre">Gedicht</span>
@@ -291,7 +306,5 @@ Twaalf uur, het weer druilt, een meeuw lacht, een hond gaapt...
 
 
         <script src="js/main.js"></script>
-        <script src="//cdn.justpremium.com/Justpremium/boilerplate/lib/TweenMax_2.0.1.js"></script>
-        <script src="//cdn.justpremium.com/Justpremium/boilerplate/lib/TimelineMax_2.0.1.js"></script>
     </body>
 </html>

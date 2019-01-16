@@ -137,7 +137,7 @@ main {
 section.aanbevolen {
     position: relative;
     height: 37vh;
-    background: url(../assets/main-header.jpg);
+    background: url(../assets/main-header2.jpg);
     background-size:cover;
     background-position: center;
     padding: 20px 50px;
@@ -146,6 +146,16 @@ section.aanbevolen {
     z-index: 1;
 }
 
+.aanbevolen-verhaal {
+    display: block;
+    position: absolute;
+    bottom: 0 !important;
+    height: 20vh;
+    padding-bottom: 4em;
+}
+.aanbevolen-verhaal a {
+    margin: 0;
+}
 
 section.aanbevolen h1 {
     color: white;
@@ -377,25 +387,48 @@ section.sortby ul li {
     bottom: -4.5em;
 }
 
-.sort-order::after {
-    content: "";
-    background: url(../assets/sort.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: .75em;
-    height: .75em;
-    display: inline-block;
-    margin-left: .9em;
-    border-radius: 3px;
-    position: relative;
-    top: 2px;
-
-}
 
 .sort-show {
     opacity: 1;
 }
 
+.hide {
+    display: none;
+}
+
+.sort-form fieldset {
+  display: inline-block;
+  position: relative;
+}
+.sort-form fieldset::after {
+      content: "";
+      background: url(../assets/sort.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      width: .75em;
+      height: .75em;
+      display: inline-block;
+      margin-left: .9em;
+      border-radius: 3px;
+      position: absolute;
+      top: 20px;
+      right: 1em;
+      pointer-events: none;
+}
+.sort-form fieldset select {
+    border-radius: 3px;
+    width: 125px;
+    padding: .7em 1.2em .7em 1.2em;
+    background: white;
+    font-size: 1em;
+    display: block;
+    color:     #13679c;
+    box-sizing: content-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
 
 
 
@@ -667,7 +700,7 @@ fieldset.genre input:checked {
         position: absolute;
         width: 100%;
         left: 0;
-        bottom: 65px;
+        bottom: 2em;
         font-size: 2em;
         padding: 2vh;
     }
@@ -757,7 +790,7 @@ fieldset.genre input:checked {
     section.aanbevolen {
         position: relative;
         height: 37vh;
-        background: url(../assets/main-header.jpg);
+        background: url(../assets/main-header2.jpg);
         background-attachment: fixed;
         background-size:auto 40%;
         background-position: top;
