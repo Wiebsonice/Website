@@ -649,7 +649,7 @@ fieldset.genre input:checked {
 }
 
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 40em) {
     .see-more {
         display: none;
     }
@@ -737,7 +737,7 @@ fieldset.genre input:checked {
     }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 56em) {
     section.aanbevolen {
         height: 60vh;
         max-height: 600px;
@@ -783,7 +783,7 @@ fieldset.genre input:checked {
 
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 75em) {
     section.verhalen {
         width: 1244px;
         margin: 0 auto;
