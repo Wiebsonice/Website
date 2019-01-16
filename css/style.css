@@ -150,7 +150,7 @@ section.aanbevolen {
     display: block;
     position: absolute;
     bottom: 0 !important;
-    height: 20vh;
+    height: 24vh;
     padding-bottom: 4em;
 }
 .aanbevolen-verhaal a {
@@ -652,6 +652,14 @@ fieldset.genre input:checked {
 @media only screen and (min-width: 650px) {
     .see-more {
         display: none;
+    }
+
+    .aanbevolen-verhaal {
+        display: block;
+        position: absolute;
+        bottom: 0 !important;
+        height: 20vh;
+        padding-bottom: 4em;
     }
 
     .sort-order {

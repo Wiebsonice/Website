@@ -14,3 +14,15 @@ body {
     width: 100%;
     margin-bottom: 26em;
 }
+
+@media only screen and (max-width: 650px) {
+    main {
+        width: 100%;
+        overflow: hidden;
+    }
+    .verhaal {
+        width: 140%;
+        margin-left: -20%;
+        margin-bottom: 26em;
+    }
+}
