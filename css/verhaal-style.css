@@ -10,8 +10,13 @@ body {
     display: none;
 }
 
+.verhaal-titel {
+    width: 100%;
+}
+
 .verhaal {
     width: 100%;
+    margin-top: -30em;
     margin-bottom: 26em;
 }
 
@@ -21,8 +26,12 @@ body {
         overflow: hidden;
     }
     .verhaal {
+        width: 190%;
+        margin-left: -61%;
+        margin-bottom: 20em;
+        margin-top: -20em;
+    }
+    .verhaal-titel {
         width: 140%;
         margin-left: -20%;
-        margin-bottom: 26em;
-    }
 }

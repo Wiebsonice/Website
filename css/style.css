@@ -25,11 +25,16 @@ a.standard, button.standard {
     border-radius: 3px;
     color: white;
     padding: 0.625em 2.8125em 0.625em 0.9375em;
+    transition: ease background-position .5s;
     text-decoration: none;
     position: relative;
     /* transition: .5s ease all; */
     box-sizing: border-box;
     display: inline-block;
+}
+
+button.standard:hover {
+    background-position: right .925em top 0.8125em;
 }
 
 a:hover {
@@ -87,7 +92,7 @@ header.page-header div .logo{
 header.colorswitch {
     background: white;
 }
-.homeBtn {
+a.homeBtn {
     margin: 0;
 }
 
@@ -160,7 +165,7 @@ section.aanbevolen {
 section.aanbevolen h1 {
     color: white;
     font-size: 1.3em;
-    margin-bottom: 1.6em;
+    margin-bottom: .6em;
     font-weight: normal;
 }
 
@@ -283,6 +288,13 @@ section.filter fieldset.genre div [type=checkbox]:checked + label::before{
     background-repeat: no-repeat;
 }
 
+section.filter fieldset.genre div [type=checkbox]:hover + label::before{
+    background-image: url('../assets/check.png');
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 section.filter fieldset.footer {
     background: #F5F5F6;
     border-radius: 3px;
@@ -312,6 +324,10 @@ section.filter fieldset.footer div label {
     margin-bottom:1.25em;
 }
 section.filter fieldset.footer div [type=checkbox]:checked + label{
+    border-bottom: 3px solid #12679C;
+}
+
+section.filter fieldset.footer div [type=checkbox]:hover + label{
     border-bottom: 3px solid #12679C;
 }
 
@@ -354,6 +370,11 @@ section.sortby ul li {
     width: auto;
     padding: 0.3125em;
 }
+
+.sort-form fieldset select {
+box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.0);
+}
+
 
 .sort {
     margin: 0;
@@ -411,9 +432,10 @@ section.sortby ul li {
       margin-left: .9em;
       border-radius: 3px;
       position: absolute;
-      top:1.25em;
+      top:1.05em;
       right: 1em;
       pointer-events: none;
+      transition: .5s ease top;
 }
 .sort-form fieldset select {
     border-radius: 3px;
@@ -519,7 +541,7 @@ article.verhaal h3  span.genre {
     left: 0.625em;
 }
 article.verhaal h3  span.rating {
-    padding: 0 0 01.25em;
+    padding: 0 0 0 1.25em;
     background: url(../assets/star.png);
     background-repeat: no-repeat;
     background-size: 15px;
@@ -534,7 +556,7 @@ article.verhaal h3  span.leestijd {
 }
 
 article.verhaal p {
-    padding: 25px1.25em 25px;
+    padding: 25px 1.25em 25px;
     font-size: 15px;
 }
 
@@ -563,6 +585,12 @@ article.verhaal footer a .ani-box {
     box-shadow: none;
 }
 
+.pageh1 {
+    color: white;
+    padding-left: 120px;
+    padding-top: 7px;
+    font-weight: normal;
+}
 
 
 .ani-box .bar1 {

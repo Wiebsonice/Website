@@ -25,33 +25,34 @@
 
     <main>
 
+        <section class="login-box login-hide">
+            <form class="login" action="index.html">
+                <fieldset>
+                    <legend><h1>Inloggen</h1></legend>
 
-        <form class="login-box login-hide" action="index.html">
-            <fieldset class="login">
-                <legend><h1>Inloggen</h1></legend>
+                    <label for="email">Email</label>
+                    <input type="email" name="login" id="email" placeholder="naam@email.com" required>
 
-                <label for="email">Email</label>
-                <input type="email" name="login" id="email" placeholder="naam@email.com" required>
+                    <label for="wachtwoord">Wachtwoord</label>
+                    <input type="password" name="login" id="wachtwoord" placeholder="*******" equired minlength="8" maxlength="24">
 
-                <label for="wachtwoord">Wachtwoord</label>
-                <input type="password" name="login" id="wachtwoord" placeholder="*******" equired minlength="8" maxlength="24">
+                    <button class="standard" type="submit" value="aanmelden">Log in</button>
+                    <a class="vergeten">wachtwoord vergeten?</a>
+                </fieldset>
+            </form>
+            <form class="recover" action="index.html">
+                <fieldset >
+                    <legend><h1>Wachtwoord vergeten</h1></legend>
 
-                <button class="standard" type="submit" value="aanmelden">Log in</button>
-                <a class="vergeten">wachtwoord vergeten?</a>
-            </fieldset>
+                    <label for="email2">Email</label>
+                    <input type="email" name="login" id="email2" placeholder="naam@email.com" required>
 
-            <fieldset class="recover">
-                <legend><h1>Wachtwoord vergeten</h1></legend>
+                    <button class="standard" type="submit" value="aanmelden">Vraag wachtwoord aan</button>
+                    <a class="onthouden">Opnieuw inloggen</a>
+                </fieldset>
+            </form>
 
-                <label for="email2">Email</label>
-                <input type="email" name="login" id="email2" placeholder="naam@email.com" required>
-
-                <button class="standard" type="submit" value="aanmelden">Vraag wachtwoord aan</button>
-                <a class="onthouden">Opnieuw inloggen</a>
-            </fieldset>
-
-        </form>
-
+        </section>
 
     </main>
 
